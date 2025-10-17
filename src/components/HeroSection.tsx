@@ -1,7 +1,7 @@
+import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { Button } from "./ui/button";
 import { ArrowLeft, Play, Sparkles, TrendingUp } from "lucide-react";
-import { useRef } from "react";
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -208,7 +208,7 @@ export function HeroSection() {
 
               {/* Floating badges */}
               <motion.div
-                className="absolute -top-6 -left-6 bg-white/90 backdrop-blur-xl border border-orange-200/50 rounded-2xl p-4 shadow-xl"
+                className="absolute -top-6 z-10 -left-6 bg-white/90 backdrop-blur-xl border border-orange-200/50 rounded-2xl p-4 shadow-xl"
                 animate={{
                   y: [0, -10, 0],
                 }}
@@ -230,7 +230,7 @@ export function HeroSection() {
               </motion.div>
 
               <motion.div
-                className="absolute -bottom-6 -right-6 bg-white/90 backdrop-blur-xl border border-orange-200/50 rounded-2xl p-4 shadow-xl"
+                className="absolute -bottom-6 z-10 -right-6 bg-white/90 backdrop-blur-xl border border-orange-200/50 rounded-2xl p-4 shadow-xl"
                 animate={{
                   y: [0, 10, 0],
                 }}
